@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{titulo}}</title>
+</head>
+<body>
+    
+    <h1>{{nome}}</h1>
+
+    {% if teste %}
+    <h1>Encotrei na condicional</h1>
+    {% else %}
+    <h1>Não encontrado na condicional</h1>
+    {% endif %}
+
+
+    {% for row in links %}
+        <a href="{{row.url}}" target="_blank">
+        {{row.nome}}</a>
+
+        {% endfor %}
+
+        <table>
+          <thead>
+            <th>Nome</th>
+            <th>Idade</th>
+          </thead>
+          
+          <tbody>
+            {% for usuario in usuarios %}
+            <tr>
+                <td>{{usuario.nome}}</td>
+                <td>{{usuario.i}}</td>
+            </tr>
+
+          </tbody>
+
+
+
+        </table>
+
+
+    
+</body>
+</html>
